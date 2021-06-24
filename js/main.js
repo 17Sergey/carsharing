@@ -17,30 +17,35 @@ $(function () {
         speed: 700,
         responsive: [
             {
-                breakpoint: 1250,
+                breakpoint: 1025,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
-                    dots: true
+                    infinite: true,
+                    dots: true,
                 }
             },
             {
-                breakpoint: 950,
+                breakpoint: 769,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true,
                 }
             },
             {
-                breakpoint: 675,
+                breakpoint: 549,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
                 }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
+            },
         ]
+    });
+    $('.menu__icon').on('click', function () {
+        $('.menu__list').slideToggle();
     });
 });
