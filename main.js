@@ -45,27 +45,27 @@ $(function () {
       },
     ],
   });
-  $(".menu__icon").on("click", function () {
-    $(".menu__list").slideToggle();
-  });
+});
+$(".menu__icon").on("click", function () {
+  $(".menu__list").slideToggle();
+});
 
-  $(document).ready(function () {
-    //E-mail Ajax Send
-    $("form").submit(function () {
-      //Change
-      var th = $(this);
-      $.ajax({
-        type: "POST",
-        url: "mail.php", //Change
-        data: th.serialize(),
-      }).done(function () {
-        alert("Thank you!");
-        setTimeout(function () {
-          // Done Functions
-          th.trigger("reset");
-        }, 1000);
-      });
-      return false;
+$(document).ready(function () {
+  //E-mail Ajax Send
+  $("form").submit(function () {
+    //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      data: th.serialize(),
+    }).done(function () {
+      alert("Thank you!");
+      setTimeout(function () {
+        // Done Functions
+        th.trigger("reset");
+      }, 1000);
     });
+    return false;
   });
 });
